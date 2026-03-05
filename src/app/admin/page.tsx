@@ -1,5 +1,5 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Users, Building2, Workflow, MessageSquare } from "lucide-react";
+import { Users, Building2, Workflow, MessageSquare, Sparkles } from "lucide-react";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 
@@ -9,6 +9,12 @@ export default function AdminDashboardPage() {
             <div className="flex items-center justify-between space-y-2">
                 <h2 className="text-3xl font-bold tracking-tight">Painel SaaS <span className="text-muted-foreground font-normal">| Super Admin</span></h2>
                 <div className="flex items-center space-x-2">
+                    <Link href="/admin/studio">
+                        <Button variant="outline" className="gap-2">
+                            <Sparkles className="w-4 h-4 text-primary" />
+                            Studio IA
+                        </Button>
+                    </Link>
                     <Link href="/admin/plan-wizard">
                         <Button>Criar Operação (Tenant)</Button>
                     </Link>
